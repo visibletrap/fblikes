@@ -11,11 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111014151337) do
+ActiveRecord::Schema.define(:version => 20111015050200) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
-    t.integer  "score"
+    t.integer  "likes"
+    t.string   "fb_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

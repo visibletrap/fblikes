@@ -13,7 +13,7 @@ describe FblikesConnector do
       fblikes.fetch([1,2])
     end
 
-    it "should return result as hash of id, name, likes" do
+    it "should return result as hash of fb_id, name, likes" do
       http = mock(SimpleHttp)
       fblikes = FblikesConnector.new(http)
       
@@ -23,7 +23,7 @@ describe FblikesConnector do
                        "likes":104390,
                        "category":"Tv channel" }')
 
-      fblikes.fetch([1]).should == [{ "id" => "98685085344",
+      fblikes.fetch([1]).should == [{ "fb_id" => "98685085344",
                                       "name" => "Channel 8", 
                                       "likes" => 104390 }]
     end
