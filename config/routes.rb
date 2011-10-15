@@ -7,7 +7,8 @@ Fblikes::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   match 'init' => 'scores#init'
-  match 'update' => 'scores#update'
+  match 'update' => 'scores#man_update'
+  match 'autoupdate' => 'scores#autoupdate'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
