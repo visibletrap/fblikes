@@ -3,7 +3,7 @@ include Spawn
 class ScoresController < ApplicationController
   def main
     @companies = Company.all(:order => 'likes desc')
-    @last_update = Company.first.updated_at
+    @last_update = Company.first(:order => 'updated_at desc').updated_at
   end
 
   def fetch
@@ -26,7 +26,7 @@ class ScoresController < ApplicationController
 
   def man_update
     update
-    render :nothing => true
+    render :text => 'Manual Update Finish'
   end
 
   def autoupdate
@@ -36,7 +36,7 @@ class ScoresController < ApplicationController
         sleep 60*60*24
       end
     end
-    render :nothing => true
+    render :text => 'Schedule Auto-Update'
   end
 
 end
