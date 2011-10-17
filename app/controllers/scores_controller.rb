@@ -2,7 +2,7 @@ include Spawn
 
 class ScoresController < ApplicationController
   def main
-    @companies = Company.all
+    @companies = Company.all(:order => 'likes desc')
   end
 
   def fetch
