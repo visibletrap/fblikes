@@ -6,10 +6,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container">
+        <h3><%= link_to 'Show Likes' %></h3>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding-top:60px;">
 
 <%= yield %>
 
   </div>
+  <footer class="footer">
+    <div class="container">
+      <p>Created by <%= link_to '@visibletrap', 'http://twitter.com/visibletrap'  %> | Contributed by <%= mail_to 'andras@viki.com' %> | Themed with Twitter's <%= link_to 'Bootstrap', 'http://twitter.github.com/bootstrap/',  %></p>
+    </div>
+  </footer>
 </body>
 </html>
