@@ -3,6 +3,7 @@ include Spawn
 class ScoresController < ApplicationController
   def main
     @companies = Company.all(:order => 'likes desc')
+    @last_update = Company.first.updated_at
   end
 
   def fetch
