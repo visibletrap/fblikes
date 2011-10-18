@@ -33,7 +33,7 @@ class ScoresController < ApplicationController
     spawn(:method => :thread) do
       while true
         update
-        sleep 60*60*24
+        sleep 60*60
       end
     end
     render :text => 'Schedule Auto-Update'
