@@ -8,7 +8,6 @@ Fblikes::Application.routes.draw do
 
   match 'init' => 'scores#init'
   match 'update' => 'scores#man_update'
-  match 'autoupdate' => 'scores#autoupdate'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

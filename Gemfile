@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 gem 'pg'
 gem 'simplehttp'
-gem "spawn", :git => 'git://github.com/tra/spawn', :branch => "edge"
 
 group :development, :test do
   gem 'rspec-rails'

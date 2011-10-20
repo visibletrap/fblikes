@@ -1,5 +1,3 @@
-include Spawn
-
 class ScoresController < ApplicationController
   def main
     @companies = Company.all(:order => 'likes desc')
@@ -28,15 +26,4 @@ class ScoresController < ApplicationController
     update
     render :text => 'Manual Update Finish'
   end
-
-  def autoupdate
-    spawn(:method => :thread) do
-      while true
-        update
-        sleep 60*60
-      end
-    end
-    render :text => 'Schedule Auto-Update'
-  end
-
 end
