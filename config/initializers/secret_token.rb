@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Fblikes::Application.config.secret_token = 'cfe7100b217dc214ab019669b80c87f986011a5f15bca4b76c9ec5424e4d4e92474bb9dbc189f64b0aac631c4ba830c7ae2406ce401809a7df8a17e14825bd8f'
+Fblikes::Application.config.secret_token = '4d0385c7a0266cd23c3298fa7952af52169298843880e96162d1b275e80a18d0b925f5dd9e70e737a78ad6d7a3b914ef030586194e3b40a69f96f98af55d20d2'
